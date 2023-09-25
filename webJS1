@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="fi">
+  <head>
+    <title>Palindromi</title>
+  </head>
   <body>
     <h2>Onko annettu sana palindromi?</h2>
     <div>
