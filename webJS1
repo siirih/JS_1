@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <body>
+    <h2>Onko annettu sana palindromi?</h2>
+    <div>
+      <form>
+        <label for="sana">Anna sana:</label><br />
+        <input type="text" id="sana" name="sana" /><br />
+      </form>
+      <button type="button" onclick="palauta()">OK</button>
+    </div>
+    <div id="palautus"></div>
+    <script>
+      function testaa() {
+        let getSana = document.getElementById("sana").value;
+        let pituus = getSana.length;
+        for (let i = 0; i < pituus / 2; i++) {
+          if (getSana[i] !== getSana[pituus - 1 - i]) {
+            return false;
+          }
+        }
+        return true;
+      }
+      function palauta() {
+        if (testaa()) {
+          document.getElementById("palautus").innerHTML = "Sana on palindromi";
+        } else {
+          document.getElementById("palautus").innerHTML =
+            "Sana ei ole palindromi";
+        }
+      }
+    </script>
+  </body>
+</html>
